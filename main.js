@@ -179,21 +179,35 @@ if(SpeechRecognition){
                   });
               comando.play();}
 
-        if (transcript.toLowerCase().trim() === "círculo") {
+      //ANIMACIÓN MEDIO GIRO
+        if (transcript.toLowerCase().trim() === "vuelta") {
                 var comando = just.animate({
                       targets: ".ball",
                       duration: 5024,
                       web: {
-                         rotate: '1turn'}
+                        y: [0, 30, 5, 1],
+                           scale: [0.6, { offset: 1, value: 1 }],
+                        }
                        });
                    comando.play();}  
-                   
-        if (transcript.toLowerCase().trim() === "derecha") {
+      //ANIMACIÓN GIRO Y SE EXPANDE     
+        if (transcript.toLowerCase().trim() === "girar") {
                     var comando = just.animate({
                           targets: ".ball",
                           duration: 5024,
                           web: {
-                            scale: 0.8}
+                            transform: [
+                               { offset: 0, value: "scale(1, 1)" },
+                               { offset: 0, value: "scale(2, 1)" },
+                               { offset: 0.3, value: "scale(1.25, 0)" },
+                               { offset: 0.4, value: "scale(0, 1.25)" },
+                               { offset: 0.5, value: "scale(2, 2)" },
+                               { offset: 0.65, value: "scale(7, 7)" },
+                               { offset: 0.75, value: "scale(4, 4)" },
+                               { offset: 0.5, value: "scale(1.15, .85)" },
+                               { offset: 1, value: "scale(1, 1)" }
+                            ]
+                         }
                            });
                        comando.play();}          
         console.log(event); }}
