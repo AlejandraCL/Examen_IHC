@@ -48,11 +48,11 @@ if(SpeechRecognition){
 
         if(transcript.toLowerCase().trim()==="ayuda del sitio"){
           window.open("instrucciones.html","width=1000,height=500,scrollbars=YES")
-        }else if(!searchFormInput.value) {
-          searchFormInput.value = transcript;}
+        }
          
         if(transcript.toLowerCase().trim()==="cerrar") { 
-          salida();}  
+          salida();
+        }  
 
         //ANIMACIÓN PARPADEO
         if (transcript.toLowerCase().trim() === "parpadeo") {
@@ -62,7 +62,8 @@ if(SpeechRecognition){
             web: {
                 opacity: [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1] 
             }});
-        comando.play();}
+        comando.play();
+      }
 
       //ANIMACIÓN TEMBLAR
       if(transcript.toLowerCase().trim()==="temblar"){
@@ -84,8 +85,10 @@ if(SpeechRecognition){
                 { offset: 0.80, value: "scale(1.05, .90)" },
                 { offset: 0.90, value: "scale(.95, 1.10)" },
                 { offset: 1, value: "scale(1, 1)" },
-              ]}});
-        comando.play();}
+              ]
+            }});
+        comando.play();
+      }
 
         //ANIMACIÓN CRECER
         if (transcript.toLowerCase().trim() === "crecer") {
@@ -96,8 +99,10 @@ if(SpeechRecognition){
                     transform: [
                         { offset: 0, value: "scale(1, 1)" },
                         { offset: 1, value: "scale(2, 2)" },
-                    ]}});
-            comando.play();}
+                    ]
+                  }});
+            comando.play();
+          }
 
         //ANIMACIÓN ALEJAR
         if (transcript.toLowerCase().trim() === "alejarse") {
@@ -107,8 +112,11 @@ if(SpeechRecognition){
                 web: {
                     transform: [
                         { offset: 0, value: "scale(2, 2)" },
-                        { offset: 0.5, value: "scale(.50, .50)" }]}});
-            comando.play();}
+                        { offset: 0.5, value: "scale(.50, .50)" }
+                      ]
+                    }});
+            comando.play();
+          }
 
         //ANIMACIÓN SALTAR
         if (transcript.toLowerCase().trim() === "saltar") {
@@ -119,7 +127,8 @@ if(SpeechRecognition){
               {transform: "translateY(0px)"}
             ],{
               duration: 5024,
-              iterations: 6 });}
+              iterations: 6 });
+            }
 
          //ANIMACIÓN ALARGAR
          if (transcript.toLowerCase().trim() === "alargado") {
@@ -132,8 +141,10 @@ if(SpeechRecognition){
                   { offset: 0.5, value: "scale(1.2, .70)" },
                   { offset: 0.75, value: "scale(1.5, .50)" },
                   { offset: 1, value: "scale(1, 1)" },
-                ]}});
-          comando.play();}
+                ]
+              }});
+          comando.play();
+        }
 
       //ANIMACIÓN MOVER
       if (transcript.toLowerCase().trim() === "mover") {
@@ -141,9 +152,11 @@ if(SpeechRecognition){
               targets: '.ball',
               duration: 5024,
               web: {
-                  transform: ['translateX(150px)', 'translateX(0)'] }});
+                  transform: ['translateX(150px)', 'translateX(0)'] 
+                }});
 
-          comando.play();}  
+          comando.play();
+        }  
 
       //ANIMACIÓN BORRAR
         if (transcript.toLowerCase().trim() === "borrar") {
@@ -151,8 +164,10 @@ if(SpeechRecognition){
             targets: ".ball",
             duration: 5024, 
             web: {
-               opacity: [1, 0],}});
-         comando.play();}
+               opacity: [1, 0],}
+              });
+         comando.play();
+        }
 
       //PODER VER LA IMAGEN DE NUEVO
         if (transcript.toLowerCase().trim() === "regresar") {
@@ -160,7 +175,8 @@ if(SpeechRecognition){
                  targets: ".ball",
                  duration: 5024,
                  web: {
-                    opacity: [0, 1],}});
+                    opacity: [0, 1],}
+                  });
               comando.play();}
 
       //ANIMACIÓN MOV A LA DERECHA
@@ -169,8 +185,10 @@ if(SpeechRecognition){
                       targets: ".ball",
                       duration: 5024,
                       web: {
-                        marginLeft: [0,1024]}});
-                   comando.play();}  
+                        marginLeft: [0,1024]
+                      }});
+                   comando.play();
+                  }  
         
         //ANIMACIÓN ACORTAR           
         if (transcript.toLowerCase().trim() === "cortar") {
@@ -178,9 +196,10 @@ if(SpeechRecognition){
                           targets: ".ball",
                           duration: 5024,
                           web: { 
-                            borderTopLeftRadius: [1500]}});
-                       comando.play();}           
-
+                            borderTopLeftRadius: [1500]
+                          }});
+                       comando.play();
+                      }           
         console.log(event); }}
         else {
     console.log("Your Browser does not support speech Recognition");}
