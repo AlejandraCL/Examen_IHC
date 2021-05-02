@@ -179,7 +179,7 @@ if(SpeechRecognition){
                   });
               comando.play();}
 
-        if (transcript.toLowerCase().trim() === "circulo") {
+        if (transcript.toLowerCase().trim() === "círculo") {
                 var comando = just.animate({
                       targets: ".ball",
                       duration: 5024,
