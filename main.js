@@ -178,6 +178,24 @@ if(SpeechRecognition){
                     opacity: [0, 1],}
                   });
               comando.play();}
+
+        if (transcript.toLowerCase().trim() === "circulo") {
+                var comando = just.animate({
+                      targets: ".ball",
+                      duration: 5024,
+                      web: {
+                         rotate: '1turn'}
+                       });
+                   comando.play();}  
+                   
+        if (transcript.toLowerCase().trim() === "derecha") {
+                    var comando = just.animate({
+                          targets: ".ball",
+                          duration: 5024,
+                          web: {
+                            scale: 0.8}
+                           });
+                       comando.play();}          
         console.log(event); }}
         else {
     console.log("Your Browser does not support speech Recognition");}
