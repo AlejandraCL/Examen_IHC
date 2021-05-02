@@ -178,28 +178,6 @@ if(SpeechRecognition){
                     opacity: [0, 1],}
                   });
               comando.play();}
-
-      //ANIMACIÓN MOV A LA DERECHA
-        if (transcript.toLowerCase().trim() === "derecha") {
-                var comando = just.animate({
-                      targets: ".ball",
-                      duration: 5024,
-                      web: {
-                        marginLeft: [0,1024]
-                      }});
-                   comando.play();
-                  }  
-        
-        //ANIMACIÓN ACORTAR           
-        if (transcript.toLowerCase().trim() === "cortar") {
-                    var comando = just.animate({
-                          targets: ".ball",
-                          duration: 5024,
-                          web: { 
-                            borderTopLeftRadius: [1500]
-                          }});
-                       comando.play();
-                      }           
         console.log(event); }}
         else {
     console.log("Your Browser does not support speech Recognition");}
