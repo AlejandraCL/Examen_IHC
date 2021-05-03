@@ -224,3 +224,14 @@ if(SpeechRecognition){
           window.close();}}
           else{
             return false;}}
+
+            function charge(){
+              var archivo = document.getElementById("file").files[0];
+              var reader = new FileReader();
+              if (file) {
+                reader.readAsDataURL(archivo);
+                reader.onloadend = function () {
+                    document.getElementById("img").src = reader.result;
+                    const imagen=document.getElementById("img");}}}
+                    document.getElementById('selectImage').addEventListener("change", function(){ 
+                      document.getElementById('img').src=this.value;});
